@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+    <script src = "https://vjs.zencdn.net/7.2.3/video.js"></script>
+</head>
+<body>
+    <!-- 이미지 태그 -->
+    <img src="rc3.jpg" alt="RC카" width="500px" height="500"> 
+    <br>
+    <img src="http://placehold.it/300x200" /> 
+    <img src="http://placehold.it/200x150" /> 
+    <img src="http://placehold.it/150x100" /> 
+    <!-- 오디오 태그 -->
+    <audio src="사이렌.mp3" controls="controls"></audio>
+    <audio src="사이렌.mp3" controls="controls" autoplay="autoplay"></audio> <!-- XHTML5 표기 기법 -->
+    <audio src="사이렌.mp3" controls autoplay></audio> <!-- HTML5 표기 기법 -->
+    <!-- source 태그 -->
+    <audio  controls="controls">
+        <source src = "사이렌.mp3" type="audio/mp3" />
+    </audio>
+    <!-- 비디오 태그 -->
+    <video  controls="controls" width="640" height="360">
+        <source src = "라인.MOV" type="video/mp4" />
+    </video>
+    <video  poster="http://placehold.it/640x360"
+                 width="640" height="360" controls="controls">
+        <source src = "라인.MOV" type="video/mp4" />
+    </video>
+    <video   width="640" height="360" controls="controls" class="video-js" data-setup="{}">
+        <source src = "wildlife.mp4" type="video/mp4" />
+    </video>
+    <video   width="640" height="360" controls="controls" class="video-js" data-setup="{}">
+        <source src = "wildlife.webm" type="video/webm" />
+    </video>
+
+    
+    <h2>이미지 태그</h2>
+    <table border="1">
+        <tr>
+            <th colspan = "1">속성 이름</th><!-- 셀의 너비 지정 -->
+            <th rowspan = "1">설명</th><!-- 셀의 높이 지정 -->
+        </tr>
+        <tr>
+            <td>src</td>
+            <td>이미지나 오디오 경로 지정</td>
+        </tr>
+        <tr>
+            <td>alt</td>
+            <td>이미지가 없을 때 나오는 글</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>이미지의 너비 지정</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>이미지의 높이 지정</td>
+        </tr>
+    </table>
+    <h2>오디오 태그</h2>
+    <table border="1">
+        <tr>
+            <th colspan = "1">속성 이름</th><!-- 셀의 너비 지정 -->
+            <th rowspan = "1">설명</th><!-- 셀의 높이 지정 -->
+        </tr>
+        <tr>
+            <td>src</td>
+            <td>이미지나 오디오 경로 지정</td>
+        </tr>
+        <tr>
+            <td>preload</td>
+            <td>음악을 재생하기 전에 모두 블러올지 지정</td>
+        </tr>
+        <tr>
+            <td>autoplay</td>
+            <td>음악을 자동 재생할지 지정</td>
+        </tr>
+        <tr>
+            <td>loop</td>
+            <td>음악을 반복할지 지정</td>
+        </tr>
+        <tr>
+            <td>controls</td>
+            <td>음악재생 도구를 출력할지 지정</td>
+        </tr>
+    </table>
+    <h2>비디오 태그</h2>
+    <table border="1">
+        <tr>
+            <th colspan = "1">속성 이름</th><!-- 셀의 너비 지정 -->
+            <th rowspan = "1">설명</th><!-- 셀의 높이 지정 -->
+        </tr>
+        <tr>
+            <td>src</td>
+            <td>비디오 경로 지정</td>
+        </tr>
+        <tr>
+            <td>poster</td>
+            <td>비디오 준비 중일 때의 이미지 파일 경로 지정</td>
+        </tr>
+        <tr>
+            <td>preload</td>
+            <td>비디오를 재생하기 전에 모두 불러올지 지정</td>
+        </tr>
+        <tr>
+            <td>autoplay</td>
+            <td>비디오를 자동 재생할지 지정</td>
+        </tr>
+        <tr>
+            <td>loop</td>
+            <td>비디오를 반복할지 지정</td>
+        </tr>
+        <tr>
+            <td>controls</td>
+            <td>비디오를 재생 도구를 출력할지 지정</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>비디오의 너비 지정</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>비디오의 높이 지정</td>
+        </tr>
+    </table>
+</body>
+</html>
