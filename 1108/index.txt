@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>1108 복습</title>
-</head>
-<body>
-    <h1>스마트웹앱 4기 최재식</h1>
-</body>
-</html>
