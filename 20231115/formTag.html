@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 입력 양식은 form 태그를 사용해서 생성 -->
+    <!-- input 태그는 사용자에게 정보를 입력 받는 기능 -->
+    <form method="get">
+        <input type="text" name="search"/>
+        <input type="submit"/>
+    </form>
+    <form method="post">
+        <input type="text" name="search"/>
+        <input type="submit"/>
+    </form>
+    <hr/>
+    <form>
+        <input type="text" name="search"/><br />
+        <input type="password" name="password"/><br />
+        <input type="password" name="password"/><br />
+        <input type="file" name="file"/><br />
+        <input type="submit" /><br />
+    </form>
+    <hr/>
+    <!-- input 태그는 사용자에게 정보를 입력 받는 기능 -->
+    <form>
+        <input type="text" /><br />
+        <input type="button"/><br />
+        <input type="checkbox"/><br />
+        <input type="file"/><br />
+        <input type="hidden"/><br />
+        <input type="image"/><br />
+        <input type="password"/><br />
+        <input type="radio"/><br />
+        <input type="reset"/><br />
+        <input type="submit"/><br />
+    </form>
+    <hr/>
+    <form>
+        <label for="name">이름</label>
+        <input id="name" type="text"/>
+    </form>
+    <hr/>
+    <!-- 개발 환경의 자동 완성 기능을 적절히 활용하고 자주 사용 -->
+    <form>
+        <input type="color" /><br />
+        <input type="date"/><br />
+        <input type="datetime"/><br />
+        <input type="datetime-local"/><br />
+        <input type="email"/><br />
+        <input type="month"/><br />
+        <input type="number"/><br />
+        <input type="range"/><br />
+        <input type="reset"/><br />
+        <input type="search"/><br />
+        <input type="tel"/><br />
+        <input type="time"/><br />
+        <input type="url"/><br />
+        <input type="week"/>
+    </form>
+    
+    <h2>form 태그의 속성</h2>
+    <table border="1">
+        <tr>
+            <th>속성 이름</th><!-- 셀의 너비 지정 -->
+            <th>설명</th><!-- 셀의 높이 지정 -->
+        </tr>
+        <tr>
+            <td>action</td>
+            <td>입력 데이터의 전달 위치를 지정</td>
+        </tr>
+        <tr>
+            <td>method</td>
+            <td>입력 데이터의 전달 방식을 선택</td>
+        </tr>
+    </table>
+    <h2>input 태그의 type 속성값</h2>
+    <table border="1">
+        <tr>
+            <th>속성값</th><!-- 셀의 너비 지정 -->
+            <th>설명</th><!-- 셀의 높이 지정 -->
+        </tr>
+        <tr>
+            <td>button</td>
+            <td>버튼을 생성</td>
+        </tr>
+        <tr>
+            <td>checkbox</td>
+            <td>체크박스를 생성</td>
+        </tr>
+        <tr>
+            <td>file</td>
+            <td>파일 입력 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>hidden</td>
+            <td>보이지 않음</td>
+        </tr>
+        <tr>
+            <td>image</td>
+            <td>이미지 형태를 생성</td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td>비밀번호 입력 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>radio</td>
+            <td>라디오 버튼을 생성</td>
+        </tr>
+        <tr>
+            <td>reset</td>
+            <td>초기화 버튼을 생성</td>
+        </tr>
+        <tr>
+            <td>submit</td>
+            <td>제출 버튼을 생성</td>
+        </tr>
+        <tr>
+            <td>text</td>
+            <td>글자 입력 양식 생성</td>
+        </tr>
+    </table>
+    <h2>HTML5 입력 양식의 type 속성값</h2>
+    <table border="1">
+        <tr>
+            <th>속성값</th><!-- 셀의 너비 지정 -->
+            <th>설명</th><!-- 셀의 높이 지정 -->
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>색상 선택 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>date</td>
+            <td>일 선택 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>datetime</td>
+            <td>날짜 선택 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>datetime-local</td>
+            <td>지역 날짜 선택양식을 생성</td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>이메일 입력 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>month</td>
+            <td>월 선택 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>number</td>
+            <td>숫자 생성 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>range</td>
+            <td>범위 선택 양식을생성</td>
+        </tr>
+        <tr>
+            <td>search</td>
+            <td>검색어 입력 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>tel</td>
+            <td>전화번호 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>time</td>
+            <td>시간 선택 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>URL주소 입력 양식을 생성</td>
+        </tr>
+        <tr>
+            <td>week</td>
+            <td>주 선택 양식을 생성</td>
+        </tr>
+    </table>
+</body>
+</html>
