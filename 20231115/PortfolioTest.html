@@ -6,24 +6,73 @@
     <title>PortfolioTest</title>
     <style>
         *{
-            margin: 0px;
+            margin: 0px; /* 전체 마진 0 */
             
         }
+        a{
+            text-decoration: none;/* 글자 밑줄을 제거 */
+            color: #ffffff;
+            font-weight: bold;
+        }
+        /* header 스타일 */
         header{
             background-color: skyblue;
-            height: 50px; 
-        }
-        footer{
-            background-color: #6379e7;
-            height: 40px;
+            height: 75px;
+            padding: 30px; 
+            list-style-type: none;
+            background-image: url(images/우주.jpg);  /* 배경에 넣을 그림을 지정 */
             text-align: center;
-            line-height: 40px;/* 줄 간격을 박스 높이와 동일하게 설정해서 글자를 세로에 대한 중간 정렬 */
+
         }
         li{
             list-style: none; /* 리스트 기호 없앰 */
             display: inline-block; /* 리스트 가로 정렬 */
-            margin: 15px; /* 바깥쪽 여백 */
-            border: 1px solid black;
+            padding: 30px;
+            
+        }
+        p{
+            color: black;
+        }
+        /* contents 스타일 */
+        img{
+            width: 300px;
+            height: 300px; /* Gallery 이미지 높이 너비 설정 */
+        }
+        
+        h2{
+            margin-bottom: 20px;
+        }
+        article{
+            text-align: center;
+        }
+        article a{
+            color: black;
+        }
+        
+        /* footer 스타일 */
+        footer{
+            background-color: #6379e7;
+            height: 100px; /* 높이 100px */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            line-height: 40px;/* 줄 간격을 박스 높이와 동일하게 설정해서 글자를 세로에 대한 중간 정렬 */
+            background-image: url(images/우주.jpg);
+            position : fixed;
+            bottom : 0;
+            width: 100%;
+
+        }
+        #goto-top{
+            position:fixed; /* 위치 고정 */
+            right: 10px; /* 오른쪽 10px 위치배치 */
+            bottom: 10px; /* 왼쪽 10px 위치배치 */
+            
+            padding: 5px;
+            border-radius: 4px; /* 둥근 테두리 반지름 설정 */
+            background-color: rgba( 100, 100, 100, 0.5 ); /* 반투명하게 만들기 */
+            text-align: center;
+        }
+        #goto-top a{
+            font-weight: bold; color:#ffffff;/*글자 스타일 굴게, 글자색 지정*/
         }
     </style>
 </head>
@@ -31,16 +80,68 @@
     <header>
         <nav>
             <ul>
-                <li>Profile</li>
-                <li>Skills</li>
-                <li>Gallery</li>
-                <li>Links</li>
-                <li>Board</li>
+                <a href="#profile"><li>Profile</li></a> <!-- target="_blank"는 페이지가 넘어감 -->
+                <a href="#skills"><li>Skills</li></a>
+                <a href="#gallery"><li>Gallery</li></a>
+                <a href="#links"><li>Links</li></a>
+                <a href="#board"><li>Board</li></a>
             </ul>
         </nav>
     </header>
-    <div id="contents">콘텐츠</div>
+    <div id="contents">
+        <article style="float: left; width: 20% ">
+            <!-- profile 책갈피 지정 -->
+            <h2 id="profile">Profile</h2>
+            <b>-영진전문대학교 컴퓨터정보계열<br/></b>
+            <b>-영진직업전문학교<br/></b>
+        </article>
+        <article style="float: left; width: 20%">
+            <h2 id="skills">Skills</h2>
+            <b>-UI/UX Design<br/></b>
+            <b>-Web Publishing<br/></b>
+            <b>-Front-end web development</b>
+            <b>-Back-end web development<br/></b>
+            <b>-Linux Server<br/></b>
+        </article>
+        <article style="float: left; width: 20%">
+            <h2 id="links">Links</h2>
+            <b>-W3schools.com<br/></b>
+            <b>-GNU Board<br/></b>
+            <b>-Dothome<br/></b>
+            <b>-Gabia<br/></b>
+            <b>-GDweb.com<br/></b>
+        </article>
+        <article style="float: left; width: 20%">
+            <h2 id="links">portfolio</h2>
+            <a href="https://sikkkkkw.github.io/home/">-github<br/></a>
+            <b>-GNU Board<br/></b>
+            <b>-Dothome<br/></b>
+            <b>-Gabia<br/></b>
+            <b>-GDweb.com<br/></b>
+        </article>
+        <article style="float: left; width: 20%">
+            <h2 id="links">Links</h2>
+            <b>-W3schools.com<br/></b>
+            <b>-GNU Board<br/></b>
+            <b>-Dothome<br/></b>
+            <b>-Gabia<br/></b>
+            <b>-GDweb.com<br/></b>
+        </article>
+        <div>
+            <article>
+                <h2 id="gallery">Gallery</h2>
+                <img src="./images/gallery01.jpg">
+                <img src="./images/gallery02.jpg">
+                <img src="./images/gallery03.jpg">
+            </article>
+
+        </div>
+        
+
+    </div>
     <footer>2023 by Choi-jae-sik, For more lnformation, contact gksmsla92@naver.com</footer>
-    
+    <div id="goto-top">
+        <a href="#">T o p</a>
+    </div>
 </body>
 </html>
