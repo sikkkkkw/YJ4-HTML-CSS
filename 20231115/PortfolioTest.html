@@ -9,6 +9,9 @@
             margin: 0px; /* 전체 마진 0 */
             
         }
+        body{
+            background-image: url(images/우주.jpg);
+        }
         a{
             text-decoration: none;/* 글자 밑줄을 제거 */
             color: #ffffff;
@@ -30,29 +33,39 @@
             padding: 30px;
             
         }
-        p{
-            color: black;
+        b{
+            color: #ffffff;
         }
         /* contents 스타일 */
         img{
-            width: 300px;
+            width: 20%;
             height: 300px; /* Gallery 이미지 높이 너비 설정 */
         }
-        
+        h1{
+            margin-bottom: 20px;
+            color:#ffffff;
+            text-align: center;
+            font-size: 40px;
+        }
         h2{
             margin-bottom: 20px;
+            color:#ffffff;
+            text-align: center;
         }
         article{
             text-align: center;
         }
         article a{
-            color: black;
+            color: #ffffff;
+        }
+        iframe{
+            border: 1px solid black ;
         }
         
         /* footer 스타일 */
         footer{
             background-color: #6379e7;
-            height: 100px; /* 높이 100px */
+            height: 50px; /* 높이 100px */
             text-align: center; /* 텍스트 가운데 정렬 */
             line-height: 40px;/* 줄 간격을 박스 높이와 동일하게 설정해서 글자를 세로에 대한 중간 정렬 */
             background-image: url(images/우주.jpg);
@@ -67,7 +80,7 @@
             bottom: 10px; /* 왼쪽 10px 위치배치 */
             
             padding: 5px;
-            border-radius: 4px; /* 둥근 테두리 반지름 설정 */
+            border-radius: 70px; /* 둥근 테두리 반지름 설정 */
             background-color: rgba( 100, 100, 100, 0.5 ); /* 반투명하게 만들기 */
             text-align: center;
         }
@@ -79,13 +92,8 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <a href="#profile"><li>Profile</li></a> <!-- target="_blank"는 페이지가 넘어감 -->
-                <a href="#skills"><li>Skills</li></a>
-                <a href="#gallery"><li>Gallery</li></a>
-                <a href="#links"><li>Links</li></a>
-                <a href="#board"><li>Board</li></a>
-            </ul>
+            <h1>최재식</h1>
+            
         </nav>
     </header>
     <div id="contents">
@@ -127,21 +135,37 @@
             <b>-Gabia<br/></b>
             <b>-GDweb.com<br/></b>
         </article>
+        
+        <article>
+            <h2 id="board">Board</h2>
+            <iframe style="text-align: center; width: 80%" src="http://gksmsla92.dothome.co.kr/gnuboard/bbs/board.php?bo_table=free" width="100%" height="700px" frameborder=0 marginheight="0" marginwidth="5" name="boardframe" scrolling="auto"></iframe>
+        </article>
+        <br>
         <div>
             <article>
+                <br>
                 <h2 id="gallery">Gallery</h2>
-                <img src="./images/gallery01.jpg">
-                <img src="./images/gallery02.jpg">
+                <br>
+                <img  src="./images/gallery01.jpg">
+                <img  src="./images/gallery02.jpg">
+                <img  src="./images/gallery03.jpg">
+                <img  src="./images/gallery03.jpg">
                 <img src="./images/gallery03.jpg">
-            </article>
+                <img src="./images/gallery03.jpg">
+                <img src="./images/gallery03.jpg">
+                <img src="./images/gallery03.jpg">
+                <img src="./images/gallery03.jpg">
+                <img src="./images/gallery03.jpg">
+                <img src="./images/gallery03.jpg">
+                <img src="./images/gallery03.jpg">
 
+            </article>
         </div>
         
-
     </div>
     <footer>2023 by Choi-jae-sik, For more lnformation, contact gksmsla92@naver.com</footer>
     <div id="goto-top">
-        <a href="#">T o p</a>
+        <a href="#">^</a>
     </div>
 </body>
 </html>

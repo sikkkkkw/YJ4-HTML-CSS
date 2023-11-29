@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간분할 태그 및 시멘틱 태그</title>
+    <style>
+        *{
+            border: 1px solid black;
+        }
+        header{
+            background-color: pink;
+        }
+        div{
+            background-color: skyblue;
+        }
+        section,aside{
+            display: inline-block;
+        }
+        footer{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id = "nav1">
+            <ul>
+                <li><a href="#">Meru-1</a></li>
+                <li><a href="#">Meru-2</a></li>
+                <li><a href="#">Meru-3</a></li>
+            </ul>
+        </nav>
+        <nav id = "nav2">nav2</nav>
+    </header>
+    <!-- 공간 분할 태그, span(inline 형식으로 레이아웃을 생성) -->
+    <span>공간1</span>
+    <span>공간2</span>
+    <span>공간3</span>
+    <span>공간4</span>
+    <!-- 공간 분할 태그, div(block 형식으로 레이아웃을 생성) -->
+    <div>공간1</div> 
+    <div>공간2</div>
+    <div>공간3</div>
+    <div>공간4</div>
+    <div id = "content">
+        <section>Section</section>
+        <aside>Aside</aside>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>
