@@ -1,0 +1,109 @@
+body{
+     
+    /* background-image: url("./졸작사진2.jpeg"); <-속성에 url 단위를 입력함 */
+}
+#box{
+    /* display: none; <-중앙의 div 태그가 화면에서 사라짐 */
+    /* display: block; <- 블록형식으로 만들어짐 */
+    /* display: inline; <- 내용들이 한줄로 나옴 */
+    /* display: inline-block; <- 블록형식이며 내용이 한줄로 나옴 */
+    display: inline;
+    background-color: red;
+    width: 50px;
+    margin: 10px;
+    /* visibility: hidden; <-태그를 보이지 않게 만듬 */
+    color: white;
+    opacity: 0.2; /* 투명도 조절하는 스타일 */
+    border-width: thick;
+    border-style: dashed;
+    border-color: black;
+    border: thick dashed black; /* 위에 3개의 코드랑 같은 거 */
+    border-radius: 20px; /* 모서리를 둥글게 */
+    border-radius: 20px 25px 30px 35px; 
+            /* 왼쪽위 오른쪽위 오른쪽아래 왼쪽아래 */
+}
+#box1{
+    display: inline-block;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 20px solid black;
+    margin: 10px;
+    padding: 30px;
+    
+}
+#div:first-child{
+    background: gold;
+    box-sizing: content-box;
+}
+#div:last-child{
+    background: orange;
+    box-sizing: border-box;
+}
+#div2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 0 30px;
+    padding: 0 30px;
+}
+
+
+h1{
+    margin: 10px;
+    font-size: 200px;
+    line-height: 2em;
+    background-color: red;
+    /* background-color: rgb(255,255,255); <-rgb 색상단위 */
+    /* background-color: #0094ff; <- 16진수 색상 단위*/
+    /* background-color: hsl(33,100%,50%); <-hsl색상 단위 */
+}
+h2{
+    background-color: orange;
+}
+h3{
+    background-color: blue;
+}
+h4{
+    background-color: green;
+}
+h5{
+    background-color: brown;
+}
+h6{
+    background-color: purple;
+}
+p:nth-child(1){
+
+}
+p:nth-child(2){
+    font-size: 100%;
+}
+p:nth-child(3){
+    font-size:  150%;
+}
+p:nth-child(4){
+    font-size: 200%;
+}
+/* 위에 코드랑 같은 내용 */
+/* p:nth-child(1){
+    
+}
+p:nth-child(2){
+    font-size: 1.0em;
+}
+p:nth-child(3){
+    font-size: 1.5em;
+}
+p:nth-child(4){
+    font-size: 2.0em;
+} */
+
+
+
