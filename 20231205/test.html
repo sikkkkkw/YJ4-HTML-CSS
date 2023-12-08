@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none; /* li의 앞에 점을 지움 */
+            /* display: inline-block; 가로 정렬 */
+            float: left; /* 오른쪽에 다붙고 뛰어진다 */
+        }
+        a{
+            text-decoration: none; color: black; /* 클릭하면 색없어짐 */
+        }
+        header{
+            background-color: blue;
+            width: 960px;
+            margin: 0 auto;
+            height: 160px;
+            position: relative;
+        }
+        header #title{
+            background-color: brown;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+        }
+        header #main_gnb{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+
+        }
+        header #main_gnb ul{
+            overflow: hidden; /* a태그 안뜨게 부모 태그를 오버플로우 히든씀 */
+        }
+        header #main_gnb a{
+            display: block; /* a태그를 블록을 만듬 */
+            padding: 2px 10px; /* 첫번째(위아래) 두번째(왼쪽오른쪽) */
+            border: 1px solid black;
+            background-color: white;
+        }
+        header #main_gnb a:hover{
+            background-color: black;
+            color: white;
+        }
+        header #main_gnb li:first-child a{
+            border-radius: 10px 0 0 10px;
+        }
+        header #main_gnb li:last-child a{
+            border-radius: 0 10px 10px 0;
+        }
+        header #main_lnb{
+            position: absolute;
+            bottom: 10px;
+            right: 0px;
+        }
+        header #main_lnb ul{
+            overflow: hidden; /* a태그 안뜨게 부모 태그를 오버플로우 히든씀 */
+        }
+        header #main_lnb a{
+            border: 1px solid black;
+            padding: 10px 20px;
+            display: block;
+            background-color: white;   
+        }
+        header #main_lnb a:hover{
+            background-color: black;
+            color: white;
+        }
+        header #main_lnb li:first-child a{
+            border-radius: 10px 0 0 10px;
+        }
+        header #main_lnb li:last-child a{
+            border-radius: 0 10px 10px 0;
+        }
+        
+        #content{
+            background-color: aquamarine;
+            width: 960px;
+            margin: 0 auto;/* 중앙정렬 */
+            overflow: hidden;
+        }
+        #content section{
+            width: 750px;
+            float: left;
+            background-color: green;
+        }
+        #conent section article{
+            border: 1px solid black;
+            padding: 20px;
+            margin-bottom: 10px;
+        } 
+        #content aside{
+            width: 200px;
+            float: right;
+            background-color: brown;
+        }
+        /* radio 버튼과 동위 선상의 div를 디스플레이 안함 */
+        #content aside input{
+            display: none;
+        }
+        #content aside > div{
+            display: none;
+        }
+        /* radio 버튼이 체크되었을 때 동위 선상에 있는 div를 디스플레이함 */
+        #content aside input:nth-of-type(1):checked ~ div:nth-of-type(1){ 
+            display: block;
+        }
+        #content aside input:nth-of-type(2):checked ~ div:nth-of-type(2){ 
+            display: block;
+        }
+        /* 탭모양 구성 */
+        aside section{
+            overflow: hidden;
+        }
+        aside section label{
+            width: 100px ;
+            height: 30px;
+            display: block;
+            float: left;
+            text-align: center;
+            background-color: white;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        #content aside input:nth-of-type(1):checked~section > label:nth-child(1){
+            background-color: black;
+            color: white;
+        }
+        #content aside input:nth-of-type(2):checked~section > label:nth-child(2){
+            background-color: black;
+            color: white;
+        }
+        /* 탭 메뉴의 목록 스타일 */
+        .item{
+            overflow: hidden;
+            padding: 10px;
+            border: 1px solid black;
+            border-top: none;
+        }
+        .thumbnails{
+            float: left;
+        }
+        .desciption{
+            float: left;
+            margin-left: 10px;
+        }
+        .desciption > strong {
+            display: block;
+            width: 123px;
+            white-space: nowrap; /* 글자가 길어지면 자동으로 줄여줌 */
+            overflow: hidden; /* 글자가 넘칠 경우 숨김 */
+            text-overflow: ellipsis; /* 글 줄임표... 표시 */
+        }
+        /* 푸터 */ 
+        footer{
+            background-color: chocolate;
+            width: 960px;
+            padding: 10px;
+            margin: 0 auto;
+            box-sizing: border-box; /* 보더 박스를 사용해서 옆에 나온 패딩을 넣음 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id ="title">
+            <h1>으아ㅓ아아</h1>
+            <h2>잠와ㅣ죽겟다</h2>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">Simulation</a></li>
+                <li><a href="#">Data</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id ="content">
+        <section>
+            <article>
+                <h3>하이</h3>
+                처음 본 널 기억해 We skipped the small talk
+                바로 다음 단계였지 뭐 단점이라곤 없는 게 단점이라던
+                그 허세도 마냥 좋았어 하지만 내 일기가
+                재미없어진 이유내가 없어진 나의매일들은 허전해
+                좀 이상해 왜 둘 너만 너만 보이는 걸까
+                난 까다롭고 힘든 아이라
+                그런 피곤한 생각만 한대
+                오늘 나눈 문자 속에
+                새로 산 티셔츠
+                그런 피곤한 생각만 한대
+                오늘 나눈 문자 속에
+                (이제 불을 꺼)
+                새로 산 티셔츠
+                그 얘기뿐이야
+                이제야 난 알 것 같아
+                Gonna block you
+                불을 꺼 To. X
+                Gonna block you
+                불을 꺼 To. X
+            </article>
+            <article>
+                <h3>하이</h3>
+                처음 본 널 기억해 We skipped the small talk
+                바로 다음 단계였지 뭐 단점이라곤 없는 게 단점이라던
+                그 허세도 마냥 좋았어 하지만 내 일기가
+                재미없어진 이유내가 없어진 나의매일들은 허전해
+                좀 이상해 왜 둘 너만 너만 보이는 걸까
+                난 까다롭고 힘든 아이라
+                그런 피곤한 생각만 한대
+                오늘 나눈 문자 속에
+                새로 산 티셔츠
+                그런 피곤한 생각만 한대
+                오늘 나눈 문자 속에
+                (이제 불을 꺼)
+                새로 산 티셔츠
+                그 얘기뿐이야
+                이제야 난 알 것 같아
+                Gonna block you
+                불을 꺼 To. X
+                Gonna block you
+                불을 꺼 To. X
+            </article>
+            <article>
+                <h3>하이</h3>
+                처음 본 널 기억해 We skipped the small talk
+                바로 다음 단계였지 뭐 단점이라곤 없는 게 단점이라던
+                그 허세도 마냥 좋았어 하지만 내 일기가
+                재미없어진 이유내가 없어진 나의매일들은 허전해
+                좀 이상해 왜 둘 너만 너만 보이는 걸까
+                난 까다롭고 힘든 아이라
+                그런 피곤한 생각만 한대
+                오늘 나눈 문자 속에
+                새로 산 티셔츠
+                그런 피곤한 생각만 한대
+                오늘 나눈 문자 속에
+                (이제 불을 꺼)
+                새로 산 티셔츠
+                그 얘기뿐이야
+                이제야 난 알 것 같아
+                Gonna block you
+                불을 꺼 To. X
+                Gonna block you
+                불을 꺼 To. X
+            </article>
+        </section>
+        <aside>
+            <input type="radio" id="first" name="tab" checked="checked">
+            <input type="radio" id="second" name="tab">
+            <section>
+                <label for="first">first</label> <!-- for id명을 넣어서 위에랑 똑같이 작동 -->
+                <label for="second">second</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <div class="thumbnails">
+                            <img src ="http://placehold.it/45x45" />
+                        </div>
+                        <div class="desciption">
+                            <strong>HTML5 Canvas</strong><p>2023-12-07</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumbnails">
+                            <img src ="http://placehold.it/45x45" />
+                        </div>
+                        <div class="desciption">
+                            <strong>HTML5 Canvas</strong><p>2023-12-07</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumbnails">
+                            <img src ="http://placehold.it/45x45" />
+                        </div>
+                        <div class="desciption">
+                            <strong>HTML5 Canvas</strong><p>2023-12-07</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <div class="thumbnails">
+                            <img src ="http://placehold.it/45x45" />
+                        </div>
+                        <div class="desciption">
+                            <strong>CSS3 Canvas</strong><p>2023-12-07</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumbnails">
+                            <img src ="http://placehold.it/45x45" />
+                        </div>
+                        <div class="desciption">
+                            <strong>CSS3 Canvas</strong><p>2023-12-07</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumbnails">
+                            <img src ="http://placehold.it/45x45" />
+                        </div>
+                        <div class="desciption">
+                            <strong>CSS3 Canvas</strong><p>2023-12-07</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumbnails">
+                            <img src ="http://placehold.it/45x45" />
+                        </div>
+                        <div class="desciption">
+                            <strong>CSS3 Canvasdwdsdw</strong><p>2023-12-07</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <h3>ddddwdwdw</h3>
+        <address>spdlqj@naver.com</address>
+    </footer>
+</body>
+</html>
