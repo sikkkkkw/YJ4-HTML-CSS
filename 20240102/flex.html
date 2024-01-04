@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* 초기값 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    @keyframes flicker {
+      0% {
+        color: black;
+      }
+      10% {
+        color: aqua;
+      }
+      25% {
+        color: brown;
+      }
+      50% {
+        color: gray;
+      }
+      75% {
+        color: green;
+      }
+      100% {
+        color: blueviolet;
+      }
+    }
+    #b {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px; /* 필요에 따라 여백 조절 가능 */
+      animation: flicker 4s infinite; /* 필요에 따라 지속 시간 조절 가능 */
+    }
+
+    /* 반응형 웹_모바일 퍼스트 */
+    body {
+      background-color: blue;
+    }
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+      height: 1600px;
+      justify-content: space-around;
+      align-content: space-around;
+    }
+    #container div {
+      border: 1px solid black;
+      height: 300px;
+      width: 98%;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    /* 이미지타이틀 */
+    #box1 {
+      position: relative;
+    }
+
+    .image-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(
+        0,
+        0,
+        0,
+        0.7
+      ); /* Adding a semi-transparent black background */
+      color: white;
+      padding: 10px;
+      margin: 0;
+    }
+
+    /* 태블릿 PC모드일때 */
+    @media screen and (min-width: 768px) {
+      body {
+        background-color: red;
+      }
+      #container {
+        display: flex;
+        height: 100vh;
+      }
+      #container div {
+        width: 49%;
+      }
+      #container div:last-child {
+        width: 99%;
+      }
+    }
+    /* PC모드일때 */
+    @media screen and (min-width: 960px) {
+      body {
+        background-color: yellow;
+      }
+      #container {
+        height: 650px;
+      }
+      #container div {
+        width: 32%;
+      }
+      #container div:last-child {
+        width: 66%;
+      }
+    }
+  </style>
+  <body>
+    <div id="b">
+      <h1>죽기 전에 꼭 한 번 가봐야할 해변 5곳</h1>
+      <div id="container">
+        <div id="box1">
+          <img src="./핑크샌드비치.png" alt="사진" />
+          <p class="image-title">
+            바하마의 핑크 샌드 비치 (Pink Sand Beach, Bahamas)
+          </p>
+        </div>
+        <div id="box1">
+          <img src="./블랙샌드비치.png" alt="사진" />
+          <p class="image-title">
+            하와이 블랙 샌드 비치 (Black Sand Beach, Hawaii)
+          </p>
+        </div>
+        <div id="box1">
+          <img src="./몰디브.jpg" alt="사진" />
+          <p class="image-title">
+            환상적인 푸른 빛의 몰디브 해변 (Bioluminescent Beach, The Maldives)
+          </p>
+        </div>
+        <div id="box1">
+          <img src="./멕시코 히든 비치.jpg" alt="사진" />
+          <p class="image-title">
+            포탄이 떨어진 자리에 만들어진 멕시코 히든 비치(Hidden Beach, Mexico)
+          </p>
+        </div>
+        <div id="box1">
+          <img src="./마호비치.jpg" alt="사진" />
+          <p class="image-title">
+            세인트 마틴의 마호비치 (Maho Beach, St Maarten)
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

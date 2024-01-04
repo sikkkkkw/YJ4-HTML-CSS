@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: blue;
+    }
+    #container {
+      display: flex;
+      flex-flow: column;
+      width: 768px;
+      height: 1700px;
+      justify-content: center;
+      align-content: space-between;
+    }
+    #box1 {
+      margin: 10px;
+      width: 300px;
+      height: 550px;
+      border: 1px solid black;
+      flex-flow: column;
+    }
+    #box2 {
+      margin: 10px;
+      width: 300px;
+      height: 550px;
+      border: 1px solid black;
+      flex-flow: column;
+    }
+    #box3 {
+      margin: 10px;
+      width: 300px;
+      height: 550px;
+      border: 1px solid black;
+      flex-flow: column;
+    }
+    img {
+      width: 100%;
+      height: 300px;
+    }
+    @media screen and (min-width: 768px) {
+      body {
+        background-color: yellow;
+      }
+      #t {
+        display: flex;
+        justify-content: center;
+      }
+      #container {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 600px;
+        flex-flow: column;
+      }
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div id="t">
+        <div id="box1">
+          <img src="1.jpg" alt="" />
+          <div>일 분 전만큼 먼 시간은 없다.-Jim Bishop</div>
+        </div>
+        <div id="box2">
+          <img src="2.jpg" alt="" />
+          <div>웃음은 마음의 조깅이다.-최현기</div>
+        </div>
+        <div id="box3">
+          <img src="3.jpg" alt="" />
+          <div>낡은 옷은 그냥 입고 새 책을 사라.-Austin</div>
+          Phelps
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
