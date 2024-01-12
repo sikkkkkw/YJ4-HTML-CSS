@@ -1,0 +1,80 @@
+/* 초기화 코드 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  color: white;
+}
+/* 헤더 */
+header {
+  height: 100vh;
+  background: url("../header.jpg") center;
+  background-size: cover;
+}
+header nav {
+  background-color: #111;
+  text-align: center;
+}
+header nav ul li {
+  display: inline-block;
+  margin: 15px 30px;
+}
+
+/* 콘텐츠 스타일 */
+#contents {
+  display: flex;
+  flex-direction: column;
+}
+#contents section {
+  padding: 50px 7%;
+  border: 1px solid #ccc;
+}
+#contents section .content {
+  padding: 20px;
+  line-height: 2.5em;
+  font-size: 1.2em;
+}
+#contents section .page-title {
+  margin: 30px;
+  font-size: 1.3em;
+}
+#contents section .content .photo {
+  display: none;
+}
+footer {
+  background-color: #222;
+  text-align: center;
+  padding: 20px;
+  color: #eee;
+  font-size: 1.5em;
+}
+/* 태블릿 모드 -768px 이상 */
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  #contents {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #contents section {
+    width: 50%;
+  }
+  #contents section#choice {
+    width: 100%;
+  }
+}
+/* PC 모드 -960PX 이상 */
+@media screen and (min-width: 960px) {
+  #contents section .content {
+    display: flex;
+  }
+  #contents section .content div {
+    width: 50%;
+  }
+  #contents section .content .photo {
+    display: block;
+    text-align: center;
+  }
+}
