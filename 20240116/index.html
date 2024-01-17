@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형웹 코딩(수업)</title>
+    <link rel="stylesheet" href="css/indes_style.css" />
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="./jquery-3.7.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      $(document).ready(function () {
+        $(".slider").bxSlider({
+          auto: true,
+          autoControls: true,
+          stopAutoOnClick: true,
+          pager: true,
+          slideWidth: 1300,
+          pause: 4000,
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- 헤더 토글 메뉴 -->
+    <header>
+      <nav>
+        <input type="checkbox" id="toggle_menu_btn" />
+        <label id="toggle" for="toggle_menu_btn">
+          <img src="./images/but_toggle.png" alt="toggle menu button" />
+        </label>
+
+        <ul id="toggle_menu">
+          <li><a href="#">처음으로</a></li>
+          <li><a href="#">코딩이란</a></li>
+          <li><a href="#">왜 코딩 교육인가</a></li>
+          <li><a href="#">교육프로그램</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 메인 캐러셀 bxslider 스크립트 -->
+    <section id="image">
+      <div class="wrapper">
+        <div class="slider">
+          <div><img src="./images/top-1.jpg" alt="slider image 1" /></div>
+          <div><img src="./images/top-2.jpg" alt="slider image 2" /></div>
+          <div><img src="./images/top-3.jpg" alt="slider image 3" /></div>
+          <div><img src="./images/top-1.jpg" alt="slider image 1" /></div>
+        </div>
+      </div>
+    </section>
+    <!-- 코딩이란 -->
+    <section id="about">
+      <div class="wrapper">
+        <article class="section_title"><h3>코딩이란?</h3></article>
+        <article class="section_contents">
+          <p><img src="./images/quot-1.png" alt="" /></p>
+          <p>
+            123123123ㄱㅈㄱㄻㄹㅇㅇㄴㄹㅈㄻㄹㄷㅈㄹㄷㅈ <br />
+            <span>빌게이츠</span>
+          </p>
+          <p><img src="./images/quot-2.png" alt="" /></p>
+        </article>
+      </div>
+    </section>
+    <!-- 왜 코딩 교육인가 -->
+    <section id="coding_why">
+      <div class="wrapper">
+        <article class="section_title"><h3>왜 코딩 교육인가?</h3></article>
+        <article class="section_contents">
+          <div class="contents_text">
+            <p>코딩교육dwswdwqdwqdwd</p>
+          </div>
+          <div class="contents_img">
+            <img src="./images/coding.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- 코딩 프로그램 -->
+    <section id="coding_pro">
+      <div class="wrapper">
+        <article class="section_title"><h3>왜 코딩 교육인가?</h3></article>
+        <article class="section_contents">
+          <div class="text">
+            <p>코딩교육</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- 푸터 -->
+    <footer></footer>
+
+    <!-- 토글 메뉴 구현을 위한 자바스크립트 소스 삽입 -->
+    <script>
+      $(function () {
+        // 토글 메뉴 플러그인 실행
+        var toggle = $("#toggle");
+        var menu = $("nav ul");
+        $(toggle).on("click", function (e) {
+          e.preventDefault(); // 이벤트 기본동작 실행 막기
+          menu.slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>

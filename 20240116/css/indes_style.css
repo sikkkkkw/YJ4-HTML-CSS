@@ -1,0 +1,163 @@
+/* 초기화 코드 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+nav {
+  height: 40px;
+}
+/* 헤더 스타일 */
+header {
+  background: #34495e;
+}
+
+/* 모바일 퍼스트 */
+header nav input#toggle_menu_btn {
+  /* 모바일 모드에서 토글버튼 숨김 */
+  display: none;
+}
+label img {
+  padding: 8px;
+}
+
+header nav ul#toggle_menu {
+  /* 모바일 모드에서 주메뉴 숨김 */
+  display: none;
+  /* height: 0;
+  transition-duration: 0.5s; */
+}
+
+header nav ul#toggle_menu li {
+  text-align: center;
+  padding: 10px;
+}
+
+header nav input#toggle_menu_btn:checked ~ ul#toggle_menu {
+  /* 모바일 모드에서 토글버튼을 눌렀을 때 주메뉴 보이게 함 */
+  display: block;
+  /* height: 200px;
+  transition-duration: 0.5s; */
+}
+section #wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+section:nth-child(2n + 1) {
+  background-color: #34495e;
+}
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.section_title {
+  margin: 30px;
+}
+.section_title h3 {
+  font-size: 1.8em;
+  text-align: center;
+}
+/* 메인 캐러셀 이미지 */
+section .slider img {
+  width: 100%;
+}
+/* 코딩이란 */
+#about article.section_contents {
+  padding: 20px 50px;
+}
+#about article p {
+  color: #ff6600;
+  font-family: "Diphylleia", serif;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 1.8em;
+}
+#about article p span {
+  font-size: 0.9em;
+  color: #aaa;
+}
+/* 왜 코딩교육인가? */
+#coding_why article .contents_img {
+  display: none;
+}
+#coding_why article.section_contents {
+  padding: 20px 50px;
+}
+#coding_why div.contents_text {
+  padding: 0 50px;
+}
+#coding_why article p {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+/* 반응형웹 PC 모드 _네비게이션 */
+@media screen and (min-width: 764px) {
+  header nav label#toggle {
+    display: none; /* pc모드에서 토글메뉴 숨김 */
+  }
+  header nav ul#toggle_menu {
+    /* PC 모드에서 주메뉴 숨김 */
+    display: block flex !important;
+    justify-content: space-around;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 60px;
+  }
+  header nav ul#toggle_menu li {
+    padding: 0px;
+    border-bottom: 0;
+  }
+  header nav ul#toggle_menu a {
+    line-height: 60px;
+  }
+  /* 반응형 웹 PC 모드 _ 왜 코딩 */
+
+  #coding_why article .contents_img {
+    display: block;
+    width: 40%;
+    align-items: center;
+  }
+  #coding_why article .section_contents {
+    display: flex;
+  }
+  #coding_why article .contents_text {
+    width: 60%;
+  }
+  #coding_why div.contents_img > img {
+    max-width: 250px;
+  }
+  /* 반응형 웹 PC 모드 _코딩 프로그램 섹션 */
+  #coding_pro article.section_contents {
+    display: flex;
+    justify-content: space-between;
+  }
+  #coding_pro article.section_contents .program {
+    width: 22%;
+  }
+}
+/* 코딩 프로그램 */
+#coding_pro article.section_contents {
+  padding: 20px 50px;
+}
+#coding_pro h4 {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+#coding_pro div.program {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}

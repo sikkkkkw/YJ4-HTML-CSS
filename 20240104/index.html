@@ -16,7 +16,16 @@
       .image-container1 {
         display: none;
       }
+
       /* 헤더 */
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      li {
+        list-style: none;
+      }
+
       #h {
         display: flex;
         justify-content: center;
@@ -43,6 +52,7 @@
 
       #c img {
         width: 100%;
+
         display: block;
       }
       /* 콘텐츠 */
@@ -96,6 +106,33 @@
         color: white;
         align-items: center;
       }
+      /* 테스트 */
+      header nav input#toggle_menu_btn {
+        /*모바일 모드에서 토글버튼 숨김 */
+        display: none;
+      }
+      header nav label#toggle {
+        display: block;
+        background-color: black;
+        padding: 10px;
+      }
+      header nav ul#toggle_menu {
+        /*모바일 모드에서 주메뉴 숨김 */
+        display: none;
+        /* height: 0;
+      transition-duration: 0.5s; */
+      }
+      header nav ul#toggle_menu li {
+        border-bottom: 1px solid #576979;
+        text-align: center;
+        padding: 15px;
+      }
+      header nav input#toggle_menu_btn:checked ~ ul#toggle_menu {
+        /*모바일 모드에서 토글버튼을 눌렀을 때 주메뉴 보이게 함 */
+        display: block;
+        /* height: 200px;
+      transition-duration: 0.5s; */
+      }
       /* 태블릿 PC모드일때 */
       @media screen and (min-width: 768px) {
         #content {
@@ -114,6 +151,27 @@
 
         #content #content3 {
           width: 100%;
+        }
+        /* 테스트 */
+        header nav label#toggle {
+          display: none; /* PC 모드에서 토글메뉴 숨김 */
+        }
+        header nav ul#toggle_menu {
+          /*PC 모드에서 주메뉴 보이게 하기 */
+          display: block flex !important;
+          width: 100%;
+          margin: 0 auto;
+          justify-content: space-around;
+          height: 60px;
+          background-color: #000;
+        }
+        header nav ul#toggle_menu li {
+          padding: 0px;
+          border-bottom: 0;
+        }
+        header nav ul#toggle_menu a {
+          line-height: 60px;
+          color: #fff;
         }
       }
       /* PC모드일때 */
@@ -134,7 +192,11 @@
           border-radius: 50%;
           display: block;
         }
-
+        #c img {
+          width: 100%;
+          height: 600px;
+          display: block;
+        }
         h2 {
           margin-bottom: 20px;
         }
@@ -164,16 +226,45 @@
         #content #content3 {
           width: 100%;
         }
+        /* 테스트 */
+        header nav label#toggle {
+          display: none; /* PC 모드에서 토글메뉴 숨김 */
+        }
+        header nav ul#toggle_menu {
+          /*PC 모드에서 주메뉴 보이게 하기 */
+          display: block flex !important;
+          width: 100%;
+          margin: 0 auto;
+          justify-content: space-around;
+          height: 60px;
+          background-color: #000;
+        }
+        header nav ul#toggle_menu li {
+          padding: 0px;
+          border-bottom: 0;
+        }
+        header nav ul#toggle_menu a {
+          line-height: 60px;
+          color: #fff;
+        }
       }
     </style>
   </head>
   <body>
     <!-- 헤더 -->
-    <div id="h">
-      <div>카페 소개</div>
-      <div>오시는 길</div>
-      <div>이 달의 추천</div>
-    </div>
+    <header>
+      <nav>
+        <input type="checkbox" id="toggle_menu_btn" />
+        <label id="toggle" for="toggle_menu_btn">
+          <img src="but_toggle.png" alt="toggle menu button" />
+        </label>
+        <ul id="toggle_menu">
+          <li><a href="#">카페 소개</a></li>
+          <li><a href="#">오시는 길</a></li>
+          <li><a href="#">이 달의 추천</a></li>
+        </ul>
+      </nav>
+    </header>
     <!-- 이미지 -->
     <div id="c">
       <img src="./header.jpg" alt="" />
