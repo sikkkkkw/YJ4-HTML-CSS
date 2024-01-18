@@ -107,6 +107,8 @@
         align-items: center;
       }
       /* 테스트 */
+      header nav {
+      }
       header nav input#toggle_menu_btn {
         /*모바일 모드에서 토글버튼 숨김 */
         display: none;
@@ -119,8 +121,8 @@
       header nav ul#toggle_menu {
         /*모바일 모드에서 주메뉴 숨김 */
         display: none;
-        /* height: 0;
-      transition-duration: 0.5s; */
+        /* height: 60px; */
+        transition-duration: 0.5s;
       }
       header nav ul#toggle_menu li {
         border-bottom: 1px solid #576979;
@@ -130,8 +132,8 @@
       header nav input#toggle_menu_btn:checked ~ ul#toggle_menu {
         /*모바일 모드에서 토글버튼을 눌렀을 때 주메뉴 보이게 함 */
         display: block;
-        /* height: 200px;
-      transition-duration: 0.5s; */
+        height: 155px;
+        transition-duration: 0.5s;
       }
       /* 태블릿 PC모드일때 */
       @media screen and (min-width: 768px) {
@@ -162,7 +164,7 @@
           width: 100%;
           margin: 0 auto;
           justify-content: space-around;
-          height: 60px;
+          height: 60px !important;
           background-color: #000;
         }
         header nav ul#toggle_menu li {
